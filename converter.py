@@ -49,8 +49,8 @@ def doconversion(file):
         et.set_tags(videoname, tags={
              "keys:gpscoordinates": [str(Latitude) + " " + str(Longitude)],
              "keys:Make": [cam_info['manufacturer']],
-             "keys:Model": [cam_info['modelName']]
-                                  }, params="-api largefilesupport=1")
+             "keys:Model": [cam_info['modelName']] 
+             })
 
     else:
         print(videoname, "no geodata")
@@ -58,7 +58,7 @@ def doconversion(file):
         et.set_tags(videoname, tags={
              "keys:Make": [cam_info['manufacturer']],
              "keys:Model": [cam_info['modelName']]
-                                  })
+             })
         
     #met = et.get_metadata(videoname)[0]
     #for i in met.items():
